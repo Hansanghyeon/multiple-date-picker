@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import DefLayout from './components/Layout/Def';
 import { GridThemeProvider } from 'styled-bootstrap-grid';
-import Grid from './style/Grid';
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
+import 'moment/locale/ko';
+// Components
+import DefLayout from './components/Layout/Def';
+import Grid from '@style/Grid';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <GridThemeProvider gridTheme={Grid}>
-      <DefLayout />
-    </GridThemeProvider>
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
+const App = () => {
+  return (
+    <React.StrictMode>
+      <GridThemeProvider gridTheme={Grid}>
+        <DefLayout />
+      </GridThemeProvider>
+    </React.StrictMode>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
