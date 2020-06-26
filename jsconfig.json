@@ -7,7 +7,19 @@
     "baseUrl": "./src/",
     "paths": {
       "@atom/*": [
-        "./components/atom/*"
+        "./components/atoms/*"
+      ],
+      "@molecule/*": [
+        "./components/molecules/*"
+      ],
+      "@organism/*": [
+        "./components/organisms/*"
+      ],
+      "@template/*": [
+        "./components/templates/*"
+      ],
+      "@style/*": [
+        "./styles/*"
       ]
     }
   },
