@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { TimelineLite } from 'gsap';
 // components
 import Postcode from '@molecule/Postcode';
 import { Col, Row } from './index.style';
@@ -8,6 +9,18 @@ import MultiDatePicker from '@molecule/Calendar/MultiDatePicker';
 const CreatePost = ({ title }) => {
   const { handleSubmit, register, errors } = useForm();
   const onSubmit = (values) => console.log(values);
+
+  const DaumMap = useRef(null);
+  const [mapValue, setMapValue] = useState('예) 판교역 235, 분당 주공');
+  const [mapToggleState, setMapToggleState] = useState(false);
+  const mapToggleHandle = () => {
+    const tl = new TimelineLite();
+    tl.to(DaumMap.current, 0, {
+      display: () => (!mapToggleState ? 'block' : 'none'),
+    });
+    setMapToggleState(!mapToggleState);
+  };
+
   return (
     <>
       <h1>{title}</h1>
@@ -34,9 +47,9 @@ const CreatePost = ({ title }) => {
             <input
               id="totalStudyTime"
               name="totalStudyTime"
+              type="number"
               ref={register({
                 required: 'Required',
-                validate: (value) => value !== 'admin' || 'Nice try!',
               })}
             />
           </Col.Input>
@@ -47,12 +60,12 @@ const CreatePost = ({ title }) => {
         <Row.Def>
           <Col.Input col>
             <span>장소 선택</span>
-            <input type="button" value={'test'} />
+            <input type="button" value={mapValue} onClick={mapToggleHandle} />
           </Col.Input>
           <Col.Def auto></Col.Def>
-          <Col.Def col={12}>
-            <Postcode />
-          </Col.Def>
+          <Col.Map col={12} ref={DaumMap}>
+            <Postcode setState={setMapValue} toggle={mapToggleHandle} />
+          </Col.Map>
         </Row.Def>
         <Row.Def>
           <Col.Input col>

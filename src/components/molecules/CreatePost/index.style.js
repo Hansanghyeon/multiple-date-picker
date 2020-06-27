@@ -12,14 +12,16 @@ export const Row = {
 };
 
 export const Col = {
-  Def: styled(_Col)`
-    box-sizing: border-box;
-  `,
+  Def: styled(_Col)``,
   Input: styled(_Col)`
     display: flex;
 
     label {
       margin-right: 8px;
     }
+  `,
+  Map: styled(_Col)`
+    box-sizing: border-box;
+    display: none;
   `,
 };
