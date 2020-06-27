@@ -1,5 +1,7 @@
 import React from 'react';
 import DaumPostcode from 'react-daum-postcode';
+// component
+import { Wrap } from './index.style';
 
 const Postcode = (props) => {
   const handleComplete = (data) => {
@@ -20,7 +22,11 @@ const Postcode = (props) => {
     console.log(fullAddress); // e.g. '서울 성동구 왕십리로2길 20 (성수동1가)'
   };
 
-  return <DaumPostcode onComplete={handleComplete} {...props} />;
+  return (
+    <Wrap>
+      <DaumPostcode onComplete={handleComplete} {...props} />
+    </Wrap>
+  );
 };
 
 export default Postcode;
