@@ -22,7 +22,7 @@ export const PupupWrap = styled.div`
 
 export const Container = {
   Def: styled(_Container)`
-    background-color: #fff;
+    background-color: #ececec;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 8px;
