@@ -12,8 +12,12 @@ export const Row = {
 };
 
 export const Col = {
-  Def: styled(_Col)``,
+  Def: styled(_Col)`
+    box-sizing: border-box;
+  `,
   Input: styled(_Col)`
+    display: flex;
+
     label {
       margin-right: 8px;
     }
