@@ -17,65 +17,89 @@ const CreatePost = ({ title }) => {
             <label htmlFor="StudyEvent">주 지도종목</label>
             <input
               id="StudyEvent"
-              name="주 지도종목"
+              name="StudyEvent"
               ref={register({
+                required: 'Required',
                 validate: (value) => value !== 'admin' || 'Nice try!',
               })}
             />
           </Col.Input>
+          <Col.Def auto>
+            {errors.StudyEvent && errors.StudyEvent.message}
+          </Col.Def>
         </Row.Def>
         <Row.Def>
           <Col.Input col>
             <label htmlFor="totalStudyTime">총 지도시간</label>
             <input
               id="totalStudyTime"
-              name="총 지도시간"
+              name="totalStudyTime"
               ref={register({
+                required: 'Required',
                 validate: (value) => value !== 'admin' || 'Nice try!',
               })}
             />
           </Col.Input>
+          <Col.Def auto>
+            {errors.totalStudyTime && errors.totalStudyTime.message}
+          </Col.Def>
         </Row.Def>
         <Row.Def>
           <Col.Input col>
             <span>장소 선택</span>
             <input type="button" value={'test'} />
           </Col.Input>
+          <Col.Def auto></Col.Def>
+          <Col.Def col={12}>
+            <Postcode />
+          </Col.Def>
         </Row.Def>
-        <MultiDatePicker />
         <Row.Def>
           <Col.Input col>
-            <label htmlFor="totalTime">총 지도시간</label>
-            <input
-              id="totalTime"
-              name="장소 담당자 이름"
-              ref={register({
-                validate: (value) => value !== 'admin' || 'Nice try!',
-              })}
-            />
+            <MultiDatePicker />
           </Col.Input>
         </Row.Def>
         <Row.Def>
           <Col.Input col>
-            <label htmlFor="manager">장소 담당자 연락처</label>
+            <label htmlFor="managerName">장소 담당자 이름</label>
             <input
-              id="manager"
-              name="장소 담당자 연락처"
+              id="managerName"
+              name="managerName"
               ref={register({
+                required: 'Required',
                 validate: (value) => value !== 'admin' || 'Nice try!',
               })}
             />
           </Col.Input>
+          <Col.Def auto>
+            {errors.managerName && errors.managerName.message}
+          </Col.Def>
         </Row.Def>
         <Row.Def>
           <Col.Input col>
-            <label htmlFor="manager">장소 담당자 연락처</label>
+            <label htmlFor="managerContact">장소 담당자 연락처</label>
             <input
-              id="manager"
+              id="managerContact"
+              name="managerContact"
+              ref={register({
+                required: 'Required',
+                validate: (value) => value !== 'admin' || 'Nice try!',
+              })}
+            />
+          </Col.Input>
+          <Col.Def auto>
+            {errors.managerContact && errors.managerContact.message}
+          </Col.Def>
+        </Row.Def>
+        <Row.Def>
+          <Col.Input col>
+            <textarea
+              id="content"
               name="장소 담당자 연락처"
               ref={register({
                 validate: (value) => value !== 'admin' || 'Nice try!',
               })}
+              placeholder="content"
             />
           </Col.Input>
         </Row.Def>
