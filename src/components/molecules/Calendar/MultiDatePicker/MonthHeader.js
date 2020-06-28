@@ -28,7 +28,7 @@ const Btn = styled.button`
 const WeekHeaderInput = ({ month, handleChangeMulti }) => {
   const dayHandle = (dayName) => {
     const dddd = document.querySelectorAll(
-      `table.CalendarMonth_table td[aria-label*="/${month}-${dayName}요일"]:not(.CalendarDay__blocked_calendar)`,
+      `table.CalendarMonth_table td[aria-label*="/${month}-${dayName}요일"]:not(.CalendarDay__blocked_calendar):not(.CalendarDay__blocked_out_of_range)`,
     );
     let result = [];
     dddd.forEach((day) => {
