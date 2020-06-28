@@ -68,6 +68,8 @@ const MultiDatePickerCalendar = () => {
       />
       <input
         type="hidden"
+        id="kboard_option_multidatepicker"
+        name="kboard_option_multidatepicker"
         value={dates.map((e) => e.format('YYYY-MM-DD')).join()}
       />
     </>
