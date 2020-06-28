@@ -12,7 +12,7 @@ import { RectDatesOverrides } from './index.style';
 import MonthHeader from './MonthHeader';
 import WeekHeader from './WeekHeader';
 
-const MultiDatePickerCalendar = ({ presets }) => {
+const MultiDatePickerCalendar = () => {
   const [dates, setDates] = useState([]);
   const handleChangeMulti = (days) => {
     // dates array
