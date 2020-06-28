@@ -8,7 +8,7 @@ import {
 // function
 import HoliDayFilter from './HoliDayFilter';
 // component
-import { RectDatesOverrides } from './index.style';
+import { RectDatesOverrides, ResetBtn } from './index.style';
 import MonthHeader from './MonthHeader';
 import WeekHeader from './WeekHeader';
 
@@ -34,7 +34,7 @@ const MultiDatePickerCalendar = () => {
     console.log(dates);
   });
   const rednerDatePresets = () => {
-    return <div onClick={() => setDates([])}>초기화</div>;
+    return <ResetBtn onClick={() => setDates([])}>초기화</ResetBtn>;
   };
   return (
     <>
@@ -65,9 +65,6 @@ const MultiDatePickerCalendar = () => {
         }}
         isDayBlocked={(day) => HoliDayFilter(day)}
         renderCalendarInfo={rednerDatePresets}
-        onNextMonthClick={(props) => {
-          console.log(props);
-        }}
       />
       <input
         type="hidden"

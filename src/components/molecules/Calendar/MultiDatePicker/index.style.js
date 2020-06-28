@@ -27,4 +27,16 @@ export const RectDatesOverrides = createGlobalStyle`
   }
 `;
 
-export const ResetBtn = styled.button``;
+export const ResetBtn = styled.button`
+  margin-left: calc(9px + 13px);
+  padding: 8px 10px;
+  border: 1px solid #e4e7e7;
+  border-radius: 3px;
+  line-height: 1;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  &:hover {
+    border: 1px solid #c4c4c4;
+  }
+`;
