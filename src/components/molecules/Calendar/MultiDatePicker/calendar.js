@@ -36,7 +36,35 @@ const MultiDatePickerCalendar = () => {
     console.log(dates);
   });
   const rednerDatePresets = () => {
-    return <ResetBtn onClick={() => setDates([])}>초기화</ResetBtn>;
+    const rangeText =
+      moment(dates.map((e) => e.format('YYYY-MM-DD')).sort()[0]).format(
+        'YYYY-MM-01',
+      ) +
+      ' ~ ' +
+      moment(
+        dates.map((e) => e.format('YYYY-MM-DD')).sort()[dates.length - 1],
+      ).format('YYYY-MM-31');
+    return (
+      <>
+        <ResetBtn onClick={() => setDates([])}>초기화</ResetBtn>
+
+        <input
+          type="hidden"
+          id="kboard_option_multidatepicker"
+          name="kboard_option_multidatepicker"
+          value={dates
+            .map((e) => e.format('YYYY-MM-DD'))
+            .sort()
+            .join()}
+        />
+        <input
+          type="hidden"
+          id="kboard_option_multidatepickerrange"
+          name="kboard_option_multidatepickerrange"
+          value={dates.length > 0 && rangeText}
+        />
+      </>
+    );
   };
   return (
     <>
@@ -70,12 +98,6 @@ const MultiDatePickerCalendar = () => {
         isOutsideRange={(day) =>
           isInclusivelyBeforeDay(day, moment().add(-1, 'days'))
         }
-      />
-      <input
-        type="hidden"
-        id="kboard_option_multidatepicker"
-        name="kboard_option_multidatepicker"
-        value={dates.map((e) => e.format('YYYY-MM-DD')).join()}
       />
     </>
   );
