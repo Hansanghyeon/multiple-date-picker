@@ -98,6 +98,7 @@ const MultiDatePickerCalendar = () => {
         isOutsideRange={(day) =>
           isInclusivelyBeforeDay(day, moment().add(-1, 'days'))
         }
+        verticalHeight="380px"
       />
     </>
   );

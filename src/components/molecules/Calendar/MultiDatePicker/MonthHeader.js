@@ -8,7 +8,7 @@ const UL = styled.ul`
   position: absolute;
   top: 82px;
 `;
-const Btn = styled.button`
+const Btn = styled.div`
   border: 0;
   width: 100%;
   color: #82888a;
