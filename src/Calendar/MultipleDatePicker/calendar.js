@@ -14,7 +14,7 @@ import { RectDatesOverrides, ResetBtn } from './index.style';
 import MonthHeader from './MonthHeader';
 import WeekHeader from './WeekHeader';
 
-const MultiDatePickerCalendar = () => {
+const MultipleDatePickerCalendar = () => {
   const [dates, setDates] = useState([]);
   const handleChangeMulti = (days) => {
     // dates array
@@ -103,4 +103,4 @@ const MultiDatePickerCalendar = () => {
     </>
   );
 };
-export default MultiDatePickerCalendar;
+export default MultipleDatePickerCalendar;

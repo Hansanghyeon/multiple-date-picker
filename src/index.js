@@ -6,12 +6,12 @@ import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import 'moment/locale/ko';
 // Components
-import MultiDatePicker from '@Cal/MultiDatePicker';
+import MultipleDatePicker from '@Cal/MultipleDatePicker';
 
 const App = () => {
   return (
     <React.StrictMode>
-      <MultiDatePicker />
+      <MultipleDatePicker />
     </React.StrictMode>
   );
 };
