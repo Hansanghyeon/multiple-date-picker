@@ -9,17 +9,14 @@
     "@fortawesome/free-regular-svg-icons": "^5.13.1",
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
-    "axios": "^0.19.2",
     "craco-alias": "^2.1.1",
-    "gsap": "^3.3.4",
     "moment": "^2.27.0",
     "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
     "react-dates": "^21.8.0",
     "react-daum-postcode": "^1.9.0",
     "react-dom": "^16.13.1",
-    "react-hook-form": "^5.7.2",
     "react-scripts": "3.4.1",
-    "styled-bootstrap-grid": "^3.1.0",
     "styled-components": "^5.1.1"
   },
   "scripts": {
@@ -35,12 +32,14 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "ie 11"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "ie 11"
     ]
   }
 }

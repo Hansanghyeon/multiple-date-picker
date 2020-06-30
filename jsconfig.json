@@ -6,20 +6,8 @@
     "checkJs": true,
     "baseUrl": "./src/",
     "paths": {
-      "@atom/*": [
-        "./components/atoms/*"
-      ],
-      "@molecule/*": [
-        "./components/molecules/*"
-      ],
-      "@organism/*": [
-        "./components/organisms/*"
-      ],
-      "@template/*": [
-        "./components/templates/*"
-      ],
-      "@style/*": [
-        "./styles/*"
+      "@Cal/*": [
+        "./Calendar/*"
       ],
       "@utile/*": [
         "./utils/*"
