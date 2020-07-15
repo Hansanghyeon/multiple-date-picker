@@ -4,7 +4,6 @@ import {
   DayPickerSingleDateController,
   CalendarDay,
   isSameDay,
-  isInclusivelyBeforeDay,
 } from 'react-dates';
 // function
 import HoliDayFilter from './HoliDayFilter';
@@ -32,9 +31,6 @@ const MultipleDatePickerCalendar = () => {
 
     setDates(newDates);
   };
-  useEffect(() => {
-    console.log(dates);
-  });
   const rednerDatePresets = () => {
     const rangeText =
       moment(dates.map((e) => e.format('YYYY-MM-DD')).sort()[0]).format(
@@ -95,9 +91,6 @@ const MultipleDatePickerCalendar = () => {
         }}
         isDayBlocked={(day) => HoliDayFilter(day)}
         renderCalendarInfo={rednerDatePresets}
-        isOutsideRange={(day) =>
-          isInclusivelyBeforeDay(day, moment().add(-1, 'days'))
-        }
         verticalHeight="380px"
       />
     </>
