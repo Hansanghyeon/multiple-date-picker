@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { FaCheck } from 'react-icons/fa';
 
 const UL = styled.ul`
   position: absolute;
@@ -51,7 +50,7 @@ const WeekHeaderInput = ({ month, handleChangeMulti }) => {
         style={{ width: '39px' }}
       >
         <Btn onClick={() => dayHandle('일')}>
-          <FontAwesomeIcon icon={faCheck} />
+          <FaCheck />
         </Btn>
       </li>
       <li
@@ -59,7 +58,7 @@ const WeekHeaderInput = ({ month, handleChangeMulti }) => {
         style={{ width: '39px' }}
       >
         <Btn onClick={() => dayHandle('월')}>
-          <FontAwesomeIcon icon={faCheck} />
+          <FaCheck />
         </Btn>
       </li>
       <li
@@ -67,7 +66,7 @@ const WeekHeaderInput = ({ month, handleChangeMulti }) => {
         style={{ width: '39px' }}
       >
         <Btn onClick={() => dayHandle('화')}>
-          <FontAwesomeIcon icon={faCheck} />
+          <FaCheck />
         </Btn>
       </li>
       <li
@@ -75,7 +74,7 @@ const WeekHeaderInput = ({ month, handleChangeMulti }) => {
         style={{ width: '39px' }}
       >
         <Btn onClick={() => dayHandle('수')}>
-          <FontAwesomeIcon icon={faCheck} />
+          <FaCheck />
         </Btn>
       </li>
       <li
@@ -83,7 +82,7 @@ const WeekHeaderInput = ({ month, handleChangeMulti }) => {
         style={{ width: '39px' }}
       >
         <Btn onClick={() => dayHandle('목')}>
-          <FontAwesomeIcon icon={faCheck} />
+          <FaCheck />
         </Btn>
       </li>
       <li
@@ -91,7 +90,7 @@ const WeekHeaderInput = ({ month, handleChangeMulti }) => {
         style={{ width: '39px' }}
       >
         <Btn onClick={() => dayHandle('금')}>
-          <FontAwesomeIcon icon={faCheck} />
+          <FaCheck />
         </Btn>
       </li>
       <li
@@ -99,7 +98,7 @@ const WeekHeaderInput = ({ month, handleChangeMulti }) => {
         style={{ width: '39px' }}
       >
         <Btn onClick={() => dayHandle('토')}>
-          <FontAwesomeIcon icon={faCheck} />
+          <FaCheck />
         </Btn>
       </li>
     </UL>
